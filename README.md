@@ -3,7 +3,7 @@
 Ce dépôt contient le projet de calculatrice développé en Python par notre équipe.
 
 ## Membres
-- Mariam : Interface graphique (Tkinter)
+- Mariam : Interface graphique 
 - Lenox : Opérations de base (+, -, ×, ÷, =, C)
 - Aïcha : Opérations avancées (puissance, racine carrée, pourcentage)
 - Yohane : Coordination, tests et packaging
