@@ -1,10 +1,33 @@
+# Fichiers et dossiers Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
 dist/
 build/
+*.pyc
+
+# Environnements virtuels
 venv/
-.env
-*.idea/
-*.vscode/
+env/
+ENV/
+.venv
+
+# Fichiers générés par PyInstaller
+*.spec
+*.exe
+*.manifest
+
+# Fichiers d'IDE
+.vscode/
+.idea/
+*.swp
+
+# Fichiers de log et de données
+*.log
+*.sqlite3
+
+# Dossiers système
 .DS_Store
 Thumbs.db
