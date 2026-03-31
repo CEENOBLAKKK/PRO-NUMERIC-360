@@ -5,7 +5,7 @@ Ce dépôt contient le projet de calculatrice développé en Python par notre é
 ## Membres
 - Mariam : Interface graphique 
 - Lenox : Opérations de base (+, -, ×, ÷, =, C)
-- Aïcha : Opérations avancées (puissance, racine carrée, pourcentage)
+- Aïcha : Opérations avancées (puissance, racine carrée, pourcentage...etc)
 - Yohane : Coordination, tests et packaging
 
 ## Objectif
