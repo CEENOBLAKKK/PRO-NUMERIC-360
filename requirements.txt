@@ -1,1 +1,6 @@
-PyInstaller==6.1.0
+# Projet PRO‑NUMERIC‑360 – Calculatrice Python
+# Ce projet utilise uniquement la bibliothèque standard de Python.
+# Aucune installation externe n'est nécessaire.
+# Version Python recommandée : 3.10.11
+# Tkinter (interface graphique) et math sont inclus par défaut.
+#Pour l'éxecutable, on utiliseras PyInstaller
