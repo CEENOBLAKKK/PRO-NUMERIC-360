@@ -1,14 +1,1 @@
-version: 2
-updates:
-  - package-ecosystem: "npm"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-  - package-ecosystem: "pip"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-      interval: "weekly"
+version: 2\nupdates:\n  - package-ecosystem: "npm"\n    directory: "/"\n    schedule:\n      interval: "daily"\n    commit-message:\n      prefix: "fix(deps)"\n    open-pull-requests-limit: 5\n    auto-merge: true\n    group: true\n  - package-ecosystem: "pip"\n    directory: "/"\n    schedule:\n      interval: "weekly"\n    commit-message:\n      prefix: "fix(deps)"\n    open-pull-requests-limit: 5\n    auto-merge: true\n    group: true\n  - package-ecosystem: "maven"\n    directory: "/"\n    schedule:\n      interval: "monthly"\n    commit-message:\n      prefix: "fix(deps)"\n    open-pull-requests-limit: 5\n    auto-merge: true\n    group: true\nsecurity:\n  automerge: true\n  versioning-strategy: increase \n        version after breaking changes\n
