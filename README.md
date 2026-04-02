@@ -1,36 +1,34 @@
-# PRO-NUMERIC-360 – Calculatrice Python
+PRO-NUMERIC-360 – Calculatrice Python
 
 Ce dépôt contient le projet de calculatrice développé en Python par notre équipe.
 
-## Membres
-- Mariam : Interface graphique 
-- Lenox : Opérations de base (+, -, ×, ÷, =, C)
-- Aïcha : Opérations avancées (puissance, racine carrée, pourcentage...etc)
-- Yohane : Coordination, tests et packaging
+Membres
+Mariam : Interface graphique
 
-## Objectif
-Créer une calculatrice fonctionnelle avec une interface graphique et la partager sous forme d’exécutable.
+Yohane : Interface graphique (travail en cohorte avec Mariam)
 
-## Utilisation
-- **Avec Python installé** : exécutez `calculatrice.py` (nécessite Tkinter, inclus par défaut).
-- **Sans Python** : téléchargez l’exécutable depuis la section **Releases** de ce dépôt.
+Lenox : Opérations de base (+, -, ×, ÷, =, C)
 
-## Organisation du dépôt
-- `main` : version finale du projet.
-- Branches temporaires : `feature/interface`, `feature/calculs-base`, `feature/calculs-avances` (supprimées après fusion).
-- Issues : utilisées pour suivre les tâches.
+Souaré : Opérations de base (travail en cohorte avec Lenox)
 
-## Comment contribuer (pour les membres de l’équipe)
-1. Créez une branche à partir de `main`.
-2. Codez dans `calculatrice.py`.
-3. Commitez vos modifications.
-4. Le superviseur crée une pull request et fusionne.
+Aïcha : Opérations avancées (puissance, racine carrée, pourcentage...etc)
 
-## Technologies
-- Python 3
-- Tkinter 
-- PyInstaller (pour l’exécutable)
+Yohane : Coordination, tests et packaging
 
----
+Objectif
+Créer une calculatrice fonctionnelle avec une interface graphique et  comme bonus, pouvoir la partager sous forme d’exécutable.
 
-*Projet réalisé dans le cadre d’un exercice collaboratif.*
+Utilisation
+Avec Python installé : exécutez calculatrice.py (nécessite Tkinter, inclus par défaut).
+
+Sans Python : téléchargez l’exécutable depuis la section Releases de ce dépôt.
+
+Organisation du dépôt
+main : version finale du projet.
+
+Branches temporaires : feature/interface, feature/calculs-base, feature/calculs-avances (supprimées après fusion).
+
+Issues : utilisées pour suivre les tâches.
+pytest==8.0.0        # Tests unitaires
+numpy==1.26.0        # Calculs avancés (optionnel)
+Projet réalisé dans le cadre d’un exercice collaboratif.
