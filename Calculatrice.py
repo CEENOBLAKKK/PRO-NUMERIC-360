@@ -1,4 +1,5 @@
 from tkinter import *
+
 window = Tk()
 window.title("PRO NUMERIC 360")
 window.geometry("620x500")  
@@ -26,7 +27,6 @@ def bouton(txt, row, col, command, colspan=1, rowspan=1,
              sticky='nsew', padx=2, pady=2)
     return btn
 
-# --- ÉCRAN PRINCIPAL ---
 entree = Entry(window, font=('Courier', 22, 'bold'),
                bg='#a8e6cf', fg='#1e272e',
                justify='right', bd=10, relief='flat')
