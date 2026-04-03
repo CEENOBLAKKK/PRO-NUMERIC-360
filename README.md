@@ -2,7 +2,7 @@ PRO-NUMERIC-360 – Calculatrice Python
 
 Ce dépôt contient le projet de calculatrice développé en Python par notre équipe.
 
-Membres
+Membres :
 Mariam : Interface graphique
 
 Yohane : Interface graphique (travail en cohorte avec Mariam)
