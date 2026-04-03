@@ -1,7 +1,5 @@
-
 resultat = 0
 saisie_en_cours = ""
-
 
 def supprimer_dernier_chiffre():
     global saisie_en_cours
@@ -37,18 +35,14 @@ def egal(premier, operation, deuxieme):
 
     if operation == "+":
         resultat = premier + deuxieme
-
     elif operation == "-":
         resultat = premier - deuxieme
-
     elif operation in ["*", "×"]:
         resultat = premier * deuxieme
-
     elif operation in ["/", "÷"]:
         if deuxieme == 0:
             return "Erreur : division par zéro impossible !"
         resultat = premier / deuxieme
-
     else:
         return "Erreur : opération non reconnue"
 
