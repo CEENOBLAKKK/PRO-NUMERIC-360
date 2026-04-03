@@ -3,7 +3,3 @@
 # Aucune installation externe n'est nécessaire pour exécuter le code source.
 # Version Python recommandée : 3.10.11
 # Tkinter et math sont inclus par défaut.
-# Pour générer l'exécutable, installez PyInstaller avec :
-# pip install -r requirements.txt
-
-pyinstaller
