@@ -1,11 +1,24 @@
 from tkinter import *
+import basics_calculs
+import scientifique
+import math
+
+last_result = None
+last_expression = None
 
 window = Tk()
 window.title("PRO NUMERIC 360")
 window.geometry("620x500")  
 window.configure(bg="#e6dbdb")  
 
+entree = Entry(window, font=('Courier', 22, 'bold'),
+               bg='#a8e6cf', fg='#1e272e',
+               justify='right', bd=10, relief='flat')
+entree.grid(row=0, column=0, columnspan=6, sticky='nsew', padx=10, pady=10)
+entree.insert(END, "0")
+
 def affichage(valeur):
+    global last_result, last_expression
     if valeur == "AC":
         entree.delete(0, END)
         entree.insert(END, "0")
@@ -13,6 +26,20 @@ def affichage(valeur):
         actuel = entree.get()
         entree.delete(0, END)
         entree.insert(END, actuel[:-1] if len(actuel) > 1 else "0")
+    elif valeur == "=":
+        try:
+            actuel = entree.get()
+            resultat = eval(actuel)  
+            last_result = resultat
+            last_expression = actuel
+            entree.delete(0, END)
+            entree.insert(END, str(resultat))
+        except:
+            entree.delete(0, END)
+            entree.insert(END, "Erreur")
+    elif valeur == "Ans":
+        if last_result is not None and last_expression is not None:
+            entree.insert(END, f"{last_expression} = {last_result}")
     else:
         actuel = entree.get()
         if actuel == "0":
@@ -27,19 +54,15 @@ def bouton(txt, row, col, command, colspan=1, rowspan=1,
              sticky='nsew', padx=2, pady=2)
     return btn
 
-entree = Entry(window, font=('Courier', 22, 'bold'),
-               bg='#a8e6cf', fg='#1e272e',
-               justify='right', bd=10, relief='flat')
-entree.grid(row=0, column=0, columnspan=6, sticky='nsew', padx=10, pady=10)
-entree.insert(END, "0")
-
 scientific_buttons = [
-    ('sin', 'sin('), ('cos', 'cos('), ('tan', 'tan('),
-    ('x²', '^2'), ('x³', '^3'), ('xⁿ', '^'),
-    ('√x', 'sqrt('), ('³√x', 'cbrt('), ('|x|', 'abs('),
-    ('log', 'log('), ('ln', 'ln('), ('eˣ', 'exp('),
-    ('10ˣ', '10^'), ('π', 'π'), ('e', 'e'),
-    ('n!', '!'), ('1/x', '1/'), ('EXP', 'EXP')
+    ('sin', 'scientifique.sinus(math.pi/2)'), 
+    ('cos', 'scientifique.cosinus(math.pi/3)'), 
+    ('tan', 'scientifique.tangente(math.pi/4)'),
+    ('√x', 'scientifique.racine(16)'), 
+    ('log', 'scientifique.logarithme(100)'), 
+    ('ln', 'scientifique.ln(math.e)'),
+    ('EXP', 'math.exp(1)'), 
+    (')', ')')
 ]
 row, col = 1, 0
 for txt, val in scientific_buttons:
@@ -59,9 +82,9 @@ bouton('AC', 4, 4, lambda: affichage('AC'), bg='#27ae60', fg='white', colspan=2)
 bouton('4', 5, 0, lambda: affichage('4'), font_size=14)
 bouton('5', 5, 1, lambda: affichage('5'), font_size=14)
 bouton('6', 5, 2, lambda: affichage('6'), font_size=14)
-bouton('×', 5, 3, lambda: affichage('×'), bg='#00cec9', fg='white')
-bouton('÷', 5, 4, lambda: affichage('÷'), bg='#00cec9', fg='white')
-bouton('^', 5, 5, lambda: affichage('^'), bg='#00cec9', fg='white')
+bouton('×', 5, 3, lambda: affichage('*'), bg='#00cec9', fg='white')
+bouton('÷', 5, 4, lambda: affichage('/'), bg='#00cec9', fg='white')
+bouton('^', 5, 5, lambda: affichage('**'), bg='#00cec9', fg='white')
 
 bouton('1', 6, 0, lambda: affichage('1'), font_size=14)
 bouton('2', 6, 1, lambda: affichage('2'), font_size=14)
