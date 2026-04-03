@@ -1,5 +1,5 @@
 from tkinter import *
-import basics_calculs
+import calculs_bases
 import scientifique
 import math
 
@@ -29,7 +29,7 @@ def affichage(valeur):
     elif valeur == "=":
         try:
             actuel = entree.get()
-            resultat = eval(actuel)  
+            resultat = eval(actuel) 
             last_result = resultat
             last_expression = actuel
             entree.delete(0, END)
